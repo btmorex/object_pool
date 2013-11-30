@@ -12,7 +12,7 @@ with memcache_pool.item() as memcache:
     memcache.set(b'key', b'value')
 ```
 
-The with statement is not required:
+The `with` statement is not required:
 
 ```python
 try:
@@ -21,7 +21,7 @@ finally:
     memcache_pool.put(memcache)
 ```
 
-It supports a timeout argument as well:
+It supports a `timeout` argument as well:
 
 ```python
 try:
