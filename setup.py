@@ -2,13 +2,19 @@ from setuptools import find_packages, setup
 
 import object_pool
 
+try:
+    import pypandoc
+    long_description = pypandoc.convert('README.md', 'rst')
+except ImportError:
+    long_description = None
+
 setup(name='object_pool',
       version=object_pool.__version__,
-      url='https://github.com/btmorex/object_pool',
       description='thread-safe python object pool',
-      license='MIT',
+      long_description=long_description,
       author='Avery Fay',
       author_email='avery@shadypixel.com',
-      packages=find_packages(exclude=['object_pool.test']),
+      url='https://github.com/btmorex/object_pool',
+      packages=find_packages(),
       test_suite='object_pool.test',
-)
+      license='MIT')
