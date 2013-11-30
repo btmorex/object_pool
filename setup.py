@@ -5,7 +5,7 @@ import object_pool
 try:
     import pypandoc
     long_description = pypandoc.convert('README.md', 'rst')
-except ImportError:
+except:
     long_description = None
 
 setup(name='object_pool',
