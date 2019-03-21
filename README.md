@@ -1,7 +1,7 @@
 object_pool
 ===========
 
-object_poll is a simple thread-safe generic python object pool. Typical use:
+object_pool is a simple thread-safe generic python object pool. Typical use:
 
 ```python
 import memcache
